@@ -2,357 +2,385 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Manohar Bugatha | QA Engineer</title>
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manohar Bugatha | QA Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader-content">
-      <div class="loader-spinner"></div>
-      <div class="loader-text">Manohar Bugatha</div>
-    </div>
-  </div>
-
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
-  <div class="cursor-glow"></div>
-
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress"></div>
-
-  <!-- Theme Toggle -->
-  <div class="theme-toggle" id="themeToggle">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </div>
-
-  <!-- 3D Canvas Background -->
-  <canvas id="bgCanvas"></canvas>
-
-  <!-- Main Content -->
-  <div class="content-wrapper">
-    <!-- Navigation -->
-    <nav class="glass-nav">
-      <div class="nav-container">
-        <div class="logo">⚡Manohar <span class="accent">Bugatha</span></div>
+  <!-- Grid Background -->
+  <div class="grid-background"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">[</span>Manohar Bugatha <span class="logo-bracket">]</span>
+      </a>
+      <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <div class="mobile-menu"><i class="fas fa-bars"></i></div>
       </div>
-    </nav>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-content">
-        <div class="hero-badge fade-in">✦ QUALITY ASSURANCE ENGINEER ✦</div>
-        <h1 class="glitch-text" data-text="Bugatha Chitra Naga Manohar">Bugatha Chitra Naga Manohar</h1>
-        <div class="type-wrapper">
-          <span class="static-prefix">I'm a </span>
-          <span id="typed-output" class="typed-text"></span>
-          <span class="cursor-blink">|</span>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-greeting">
+        <span class="line"></span>
+        <span class="greeting-text">Hello, I'm</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-first">Bugatha Chitra</span>
+        <span class="name-last">Naga Manohar</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">//</span>
+        <span class="role-text" id="roleText">QA Engineer</span>
+        <span class="role-cursor"></span>
+      </div>
+      <p class="hero-desc">Manual & Automation Testing Specialist | 2.5+ years of delivering quality-first solutions</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Bugs Squashed</span>
         </div>
-        <p class="hero-desc fade-in delay-1">Manual & Automation Testing Expert | UI/UX Designer | 2.5+ Years Experience</p>
-        <div class="hero-btns fade-in delay-2">
-          <button class="btn-primary" id="downloadResumeBtn">
-            <i class="fas fa-download"></i> Download Resume
-          </button>
-          <a href="#contact" class="btn-outline">
-            <i class="fas fa-paper-plane"></i> Contact Me
-          </a>
+        <div class="stat">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Release Stability</span>
         </div>
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <div class="mouse-wheel"></div>
+        <div class="stat">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Test Suites</span>
         </div>
       </div>
-    </section>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="downloadBtn">
+          <i class="fas fa-download"></i> Resume
+        </button>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-comment"></i> Contact
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> ABOUT ME
-        </h2>
-        <div class="about-grid">
-          <div class="about-card glass-effect">
-            <p class="about-text">Detail-oriented <strong>QA Analyst and Test Engineer</strong> with <strong>2.5+ years</strong> of experience in Manual and Automation Testing of web and mobile applications. Proficient in full <strong>Software Testing Life Cycle (STLC)</strong>, Agile/Scrum methodology, and defect lifecycle management using Jira and ClickUp.</p>
-            <p class="about-text">Hands-on experience with automation tools including <strong>Maestro (mobile)</strong> and <strong>Katalon Studio</strong> (web/mobile). Additional expertise in <strong>UI/UX Design using Figma</strong> — bridging the gap between design vision and technical implementation.</p>
-            <div class="about-stats">
-              <div class="stat">
-                <i class="fas fa-bug"></i>
-                <span>500+ Bugs Squashed</span>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01.</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="highlight-text">Detail-oriented QA Analyst with 2.5+ years of experience in Manual and Automation Testing.</p>
+          <p>Proficient in full Software Testing Life Cycle (STLC), Agile/Scrum methodology, and defect lifecycle management using Jira and ClickUp. Hands-on experience with automation tools including Maestro (mobile) and Katalon Studio (web/mobile).</p>
+          <p>Additional expertise in UI/UX Design using Figma — bridging the gap between design vision and technical implementation.</p>
+          <div class="about-cards">
+            <div class="about-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Location</strong>
+                <span>Eluru, Andhra Pradesh</span>
               </div>
-              <div class="stat">
-                <i class="fas fa-rocket"></i>
-                <span>30+ Test Suites</span>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span>manoharbugatha@gmail.com</span>
               </div>
-              <div class="stat">
-                <i class="fas fa-mobile-alt"></i>
-                <span>40+ Devices Tested</span>
+            </div>
+            <div class="about-card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone</strong>
+                <span>+91 8555979128</span>
               </div>
             </div>
           </div>
-          <div class="floating-icons">
-            <i class="fas fa-shield-alt"></i>
-            <i class="fas fa-vial"></i>
-            <i class="fas fa-robot"></i>
-            <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <div class="about-badge">
+          <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <span>ISTQB Certified (In Progress)</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <span>Agile Testing Expert</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-check-circle"></i>
+            <span>UI/UX Design Certified</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-dark">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> TECHNICAL SKILLS
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-card glass-effect">
-            <h3><i class="fas fa-flask"></i> Testing & QA</h3>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02.</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3><i class="fas fa-flask"></i> Testing & QA</h3>
+          <div class="skill-items">
             <div class="skill-item">
               <span>Manual & Functional Testing</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="98"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="95"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>Automation (Katalon, Maestro)</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="85"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>API Testing (Postman)</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="90"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>Regression & UAT</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="92"></div>
+              </div>
             </div>
           </div>
-          <div class="skill-card glass-effect">
-            <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+        </div>
+        <div class="skill-group">
+          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <div class="skill-items">
             <div class="skill-item">
               <span>Jira / ClickUp / Asana</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="90"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>Git / GitHub</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Postman / Swagger</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="80"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>WordPress / FlutterFlow</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="75"></div>
+              </div>
             </div>
           </div>
-          <div class="skill-card glass-effect">
-            <h3><i class="fas fa-palette"></i> Design & Methodology</h3>
+        </div>
+        <div class="skill-group">
+          <h3><i class="fas fa-palette"></i> Design & Methodology</h3>
+          <div class="skill-items">
             <div class="skill-item">
-              <span>Figma (UI/UX Design)</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <span>Figma (UI/UX)</span>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="88"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>Agile / Scrum</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="94"></div>
+              </div>
             </div>
             <div class="skill-item">
               <span>STLC / SDLC</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="96"></div></div>
-            </div>
-            <div class="skill-item">
-              <span>Adobe Photoshop</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-progress="96"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> FEATURED PROJECTS
-        </h2>
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="automation">Automation</button>
-          <button class="filter-btn" data-filter="manual">Manual</button>
-          <button class="filter-btn" data-filter="api">API Testing</button>
-        </div>
-        <div class="projects-grid" id="projectsGrid">
-          <div class="project-card glass-effect" data-category="manual automation">
-            <div class="project-icon"><i class="fas fa-hard-hat"></i></div>
-            <h3>CivilBook</h3>
-            <p>Construction-based web & mobile application testing. Executed 150+ test cases for functional, regression, and UAT phases. Implemented cross-browser and cross-device validation.</p>
-            <div class="project-tech">
-              <span>Jira</span>
-              <span>Maestro</span>
-              <span>Katalon</span>
-            </div>
-          </div>
-          <div class="project-card glass-effect" data-category="api manual">
-            <div class="project-icon"><i class="fas fa-credit-card"></i></div>
-            <h3>Payment Platform Migration</h3>
-            <p>Financial services data migration project. Validated 500+ financial records using Excel macros. Performed API testing and ensured zero data loss post-migration.</p>
-            <div class="project-tech">
-              <span>Postman</span>
-              <span>Jira</span>
-              <span>Excel</span>
-            </div>
-          </div>
-          <div class="project-card glass-effect" data-category="manual automation">
-            <div class="project-icon"><i class="fas fa-qrcode"></i></div>
-            <h3>Scan-Based Application</h3>
-            <p>Lifestyle/Hospitality mobile app testing. Designed smoke, sanity, and regression test suites. Validated QR scanning and booking workflows.</p>
-            <div class="project-tech">
-              <span>ClickUp</span>
-              <span>Figma</span>
-              <span>Manual Testing</span>
-            </div>
-          </div>
-        </div>
+  <!-- Work Experience Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03.</span>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="section-line"></div>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-dark">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> WORK EXPERIENCE
-        </h2>
-        <div class="timeline">
-          <div class="timeline-item glass-effect">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Dec 2023 - Present</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
               <h3>QA Analyst - Manual Tester</h3>
-              <h4>Fugen Webtech Pvt. Ltd</h4>
-              <ul>
-                <li>Designed and executed 150+ test cases across functional, regression, UI, and UAT phases</li>
-                <li>Automated mobile test flows using Maestro (Android/iOS), reducing regression effort by 35%</li>
-                <li>Developed automated regression suites with Katalon Studio for web/mobile applications</li>
-                <li>Validated REST APIs using Postman and designed UI/UX screens in Figma</li>
-                <li>Active participant in Agile Scrum ceremonies including Sprint Planning and Daily Stand-ups</li>
-              </ul>
+              <span class="company">Fugen Webtech Pvt. Ltd</span>
+              <span class="date">Dec 2023 - Present</span>
             </div>
+            <ul>
+              <li>Designed and executed 150+ test cases across functional, regression, UI, integration, and UAT phases</li>
+              <li>Automated mobile test flows using Maestro (Android/iOS), reducing regression effort by 35%</li>
+              <li>Developed automated regression suites with Katalon Studio for web/mobile applications</li>
+              <li>Validated REST APIs using Postman and designed UI/UX screens in Figma</li>
+              <li>Active participant in Agile Scrum ceremonies including Sprint Planning and Daily Stand-ups</li>
+            </ul>
           </div>
-          <div class="timeline-item glass-effect">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Jan 2023 - Nov 2023</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
               <h3>Freelance QA Consultant</h3>
-              <h4>Self-employed (Fintech & Lifestyle)</h4>
-              <ul>
-                <li>Performed end-to-end data migration testing for Payment Platform with 100% accuracy</li>
-                <li>Coordinated UAT sessions with stakeholders for requirement validation</li>
-                <li>Executed comprehensive testing for scan-based lifestyle mobile applications</li>
-                <li>Tracked and resolved 100+ defects using Jira and ClickUp</li>
-              </ul>
+              <span class="company">Self-employed (Fintech & Lifestyle)</span>
+              <span class="date">Jan 2023 - Nov 2023</span>
             </div>
+            <ul>
+              <li>Performed end-to-end data migration testing for Payment Platform with 100% accuracy</li>
+              <li>Coordinated UAT sessions with stakeholders for requirement validation</li>
+              <li>Executed comprehensive testing for scan-based lifestyle mobile applications</li>
+              <li>Tracked and resolved 100+ defects using Jira and ClickUp</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> CERTIFICATIONS
-        </h2>
-        <div class="certs-grid">
-          <div class="cert-card glass-effect">
-            <i class="fas fa-certificate"></i>
-            <h4>ISTQB Foundation Level</h4>
-            <p>Certified Tester (In Progress)</p>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04.</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-hard-hat"></i>
           </div>
-          <div class="cert-card glass-effect">
-            <i class="fab fa-figma"></i>
-            <h4>UI/UX Design Bootcamp</h4>
-            <p>Figma Mastery & Prototyping</p>
+          <h3>CivilBook</h3>
+          <p>Construction-based web & mobile application testing across multiple devices and browsers.</p>
+          <div class="project-tech">
+            <span>Jira</span>
+            <span>Maestro</span>
+            <span>Katalon</span>
           </div>
-          <div class="cert-card glass-effect">
-            <i class="fas fa-check-double"></i>
-            <h4>Agile Testing & Jira</h4>
-            <p>Atlassian Agile Certification</p>
+          <div class="project-links">
+            <a href="#" class="project-link">Case Study →</a>
           </div>
-          <div class="cert-card glass-effect">
-            <i class="fas fa-code-branch"></i>
-            <h4>Katalon Studio Advanced</h4>
-            <p>Web & Mobile Automation</p>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>Payment Platform Migration</h3>
+          <p>Financial services data migration with 500+ records validated using Excel macros.</p>
+          <div class="project-tech">
+            <span>Postman</span>
+            <span>Jira</span>
+            <span>Excel</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Case Study →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <h3>Scan-Based Application</h3>
+          <p>Lifestyle hospitality mobile app testing with comprehensive smoke and regression suites.</p>
+          <div class="project-tech">
+            <span>ClickUp</span>
+            <span>Figma</span>
+            <span>Manual</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Case Study →</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-dark">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-accent">//</span> GET IN TOUCH
-        </h2>
-        <div class="contact-wrapper">
-          <div class="contact-info glass-effect">
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05.</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-text">Have a project in mind or want to discuss a QA opportunity? I'd love to hear from you.</p>
+          <div class="contact-details">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <span>manoharbugatha@gmail.com</span>
             </div>
             <div class="contact-item">
-              <i class="fas fa-phone-alt"></i>
+              <i class="fas fa-phone"></i>
               <span>+91 8555979128</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <span>Eluru, Andhra Pradesh, India</span>
             </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
           </div>
-          <form class="contact-form glass-effect" id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">
-              Send Message <i class="fas fa-paper-plane"></i>
-            </button>
-            <div id="formMessage" class="form-message"></div>
-          </form>
+          <div class="social-media">
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Manohar Bugatha - QA Engineer Portfolio. Built with precision and passion.</p>
-      </div>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Manohar Bugatha. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
