@@ -50,7 +50,7 @@ function animateSkillBars() {
     const rect = bar.getBoundingClientRect();
     const isVisible = rect.top < window.innerHeight - 100;
     
-    if (isVisible && bar.style.width === '0px' || !bar.style.width) {
+    if (isVisible && (bar.style.width === '0px' || !bar.style.width || bar.style.width === '0%')) {
       const progress = bar.getAttribute('data-progress');
       bar.style.width = progress + '%';
     }
@@ -85,7 +85,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - 200) {
+    if (window.scrollY >= sectionTop - 200) {
       current = section.getAttribute('id');
     }
   });
@@ -154,72 +154,29 @@ if (contactForm) {
   });
 }
 
-// ========== DOWNLOAD RESUME ==========
+// ========== DOWNLOAD RESUME PDF ==========
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
-  downloadBtn.addEventListener('click', () => {
-    const resumeContent = `BUGATHA CHITRA NAGA MANOHAR
-QA Analyst | Manual and Automation Test Engineer | UI/UX Designer
-
-CONTACT
-Email: manoharbugatha@gmail.com
-Phone: +91 8555979128
-Location: Eluru, Andhra Pradesh, India
-
-PROFESSIONAL SUMMARY
-Detail-oriented QA Analyst and Test Engineer with 2.5+ years of experience in Manual and Automation Testing of web and mobile applications. Proficient in full Software Testing Life Cycle (STLC), Agile/Scrum methodology, and defect lifecycle management using Jira and ClickUp.
-
-TECHNICAL SKILLS
-• Testing Tools: Maestro, Katalon Studio, Postman
-• Testing Types: Functional, Regression, UI, Integration, System, UAT
-• Automation: Mobile Flow Automation, Web/Mobile Regression
-• Design Tools: Figma, Adobe Photoshop, Sketchbook
-• Project Management: Jira, ClickUp, Asana
-• Methodology: Agile/Scrum/Waterfall – STLC, SDLC
-
-PROFESSIONAL EXPERIENCE
-
-QA Analyst – Manual Tester | Fugen Webtech Pvt.Ltd (Dec 2023 – Present)
-• Designed and executed comprehensive test plans for web and mobile applications
-• Automated end-to-end mobile test flows using Maestro for Android and iOS
-• Developed automated regression test suites using Katalon Studio
-• Validated REST APIs using Postman
-• UI/UX screens design in Figma
-
-Freelance QA Consultant (Jan 2023 – Nov 2023)
-• Performed end-to-end data migration testing for Payment Platform
-• Coordinated UAT sessions with stakeholders
-• Executed testing for scan-based lifestyle mobile applications
-
-PROJECTS
-• CivilBook: Construction-based web & mobile application testing
-• Payment Platform Migration: Financial services data validation
-• Scan-Based Application: Lifestyle/hospitality mobile testing
-
-CERTIFICATIONS
-• ISTQB Foundation Level (In Progress)
-• UI/UX Design Bootcamp - Figma Mastery
-• Agile Testing & Jira - Atlassian Certified
-• Katalon Studio Advanced - Web & Mobile Automation
-
-KEY STRENGTHS
-• Strong attention to detail in identifying critical defects
-• Deep expertise in manual testing with STLC and defect lifecycle
-• Practical automation support experience with Maestro and Katalon Studio
-• UI/UX proficiency for analyzing interfaces
-• Effective cross-functional collaboration
-
-Download the complete portfolio website for more details.`;
+  downloadBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    // Method 1: Direct download using anchor tag (works best for local files)
     const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.href = url;
-    link.download = 'Manohar_Bugatha_Resume.txt';
+    link.href = 'Manohar-QA-Resume.pdf';
+    link.download = 'Manohar-QA-Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    
+    // Show success message
+    const originalText = downloadBtn.innerHTML;
+    downloadBtn.innerHTML = '<i class="fas fa-check"></i> Downloading...';
+    downloadBtn.disabled = true;
+    
+    setTimeout(() => {
+      downloadBtn.innerHTML = originalText;
+      downloadBtn.disabled = false;
+    }, 2000);
   });
 }
 
